@@ -14,7 +14,9 @@
 해당 명령어를 통해 손쉽게 next js 13 버전 프로젝트를 생성할 수 있다.
 <div>
 기존 12버전과는 다르게 TypeScript가 default이다.(물론 설치중에 선택 안하면 되긴함)<br/>
-<i><<0001 이미지  추가 할 것>><br/></i>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/57449358/218498683-9dc9a34c-ba0e-4b2c-a650-0cd839e440f8.PNG">
+</p>
 /app 디렉토리가 존재한다.
 <br/>
 보면 head,layout,page 등등이 존재한다.<br/>
@@ -62,7 +64,9 @@ ip:port/write 로 접근할 수 있을 것이다. ...(restfull 하지 않은데?
 <div>2.3. 동적 페이지</div>
 <div>강의에서는 동적 페이지(매개변수 포함), Docs에서는 Dynamic Segments라 하고 있다. 그냥 스프링 부트에서의 Path Variable이다. url로 부터 변수 추출하는 것일 뿐</div>
 
-<<0002 이미지 추가>>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/57449358/218498599-65081a20-9e2d-43c9-95c3-18d8390299bd.PNG">
+</p>
 
 <div>폴더명을 [] 대괄호 안에 쓰고 코드를 다음과 같이하면 변수를 받아온다.</div>
 <pre>
