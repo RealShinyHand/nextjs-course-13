@@ -1,3 +1,31 @@
+import Link from "next/link";
+
 export default function newsPage() {
-  return <h1>this is News Page</h1>;
+  const list: string[] = ["news1", "news2", "news3", "news4"];
+
+  return (
+    <>
+      <div>A 태그형</div>
+      <ul>
+        {list.map((item, index) => (
+          <li>
+            <a href={`/news/${index}`}>
+              {index} - {item}
+            </a>
+          </li>
+        ))}
+      </ul>
+
+      <div>Link 태그 형</div>
+      <ul>
+        {list.map((item, index) => (
+          <li>
+            <Link href={`/news/${index}`}>
+              {index} - {item}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </>
+  );
 }

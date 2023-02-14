@@ -22,7 +22,11 @@
 보면 head,layout,page 등등이 존재한다.<br/>
 이름 그대로의 기능을 하는 예약파일들이다. 
 head 는 page 헤드 구성하고 layout은 page의 레이아웃 잡는 것이다.
-<div>-실험 결과 qwe 디렉터리 생성 후 그 안에 head와 layout을 다시 만들지 않으면 상위 layout과 head가 그대로 응답으로 온다.(page는 없으면 404에러다.)</div>
+<div>
+<del>-실험 결과 qwe 디렉터리 생성 후 그 안에 head와 layout을 다시 만들지 않으면 상위 layout과 head가 그대로 응답으로 온다.(page는 없으면 404에러다.)
+</del>
+layout의 경우 중첩되는 것이였다. 
+</div>
 </div>
 
 <br/>
