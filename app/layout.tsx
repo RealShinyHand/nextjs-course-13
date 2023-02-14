@@ -1,3 +1,5 @@
+import Layout from "../components/ui/layout/Layout.js";
+import "./global.css";
 export default function RootLayout({
   children,
 }: {
@@ -11,8 +13,7 @@ export default function RootLayout({
       */}
       <head />
       <body>
-        {children}
-        <div>asdf</div>
+        <Layout children={children}></Layout>
       </body>
     </html>
   );
