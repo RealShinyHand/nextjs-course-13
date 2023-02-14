@@ -8,7 +8,7 @@ export default function newsPage() {
       <div>A 태그형</div>
       <ul>
         {list.map((item, index) => (
-          <li>
+          <li key={index}>
             <a href={`/news/${index}`}>
               {index} - {item}
             </a>
@@ -19,8 +19,8 @@ export default function newsPage() {
       <div>Link 태그 형</div>
       <ul>
         {list.map((item, index) => (
-          <li>
-            <Link href={`/news/${index}`}>
+          <li key={index}>
+            <Link href={`/news/${index}`} replace={true} prefetch={false}>
               {index} - {item}
             </Link>
           </li>
