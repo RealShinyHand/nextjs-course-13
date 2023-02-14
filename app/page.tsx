@@ -1,4 +1,4 @@
-import MeetupList from "../components/ui/meetups/MeetupList";
+import MeetupList from "../components/meetups/MeetupList";
 const Dummy_MEETUPS = [
   {
     id: "m1",
