@@ -2,16 +2,10 @@
 import { useRef } from "react";
 
 import Card from "../ui/Card.js";
+import { MeeupDto } from "./MeetupDto.jsx";
 import classes from "./NewMeetupForm.module.css";
 
-function NewMeetupForm(props: {
-  onAddMeetup: (arg0: {
-    title: any;
-    image: any;
-    address: any;
-    description: any;
-  }) => void;
-}) {
+function NewMeetupForm(props: { onAddMeetup: (arg0: MeeupDto) => void }) {
   const titleInputRef = useRef<HTMLInputElement>(null);
   const imageInputRef = useRef<HTMLInputElement>(null);
   const addressInputRef = useRef<HTMLInputElement>(null);
@@ -20,16 +14,17 @@ function NewMeetupForm(props: {
   function submitHandler(event: any) {
     event.preventDefault();
 
-    const enteredTitle = titleInputRef?.current;
-    const enteredImage = imageInputRef.current;
-    const enteredAddress = addressInputRef.current;
-    const enteredDescription = descriptionInputRef.current;
+    const enteredTitle: string | undefined = titleInputRef.current?.value;
+    const enteredImage = imageInputRef.current?.value;
+    const enteredAddress = addressInputRef.current?.value;
+    const enteredDescription = descriptionInputRef.current?.value;
 
-    const meetupData = {
-      title: enteredTitle,
-      image: enteredImage,
-      address: enteredAddress,
-      description: enteredDescription,
+    const meetupData: MeeupDto = {
+      id: "",
+      title: enteredTitle ?? "",
+      image: enteredImage ?? "",
+      address: enteredAddress ?? "",
+      description: enteredDescription ?? "",
     };
 
     props.onAddMeetup(meetupData);

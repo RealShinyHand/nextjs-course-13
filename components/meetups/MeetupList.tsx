@@ -1,7 +1,7 @@
 import MeetupItem from "./MeetupItem";
 import classes from "./MeetupList.module.css";
-
-function MeetupList(props) {
+import { MeeupDto } from "./MeetupDto";
+function MeetupList(props: { meetups: MeeupDto[] }) {
   console.log(props);
   return (
     <ul className={classes.list}>
