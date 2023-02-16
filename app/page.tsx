@@ -31,7 +31,7 @@ export default function HomePageCSR() {
   useEffect(() => {
     getDataClient().then((data) => setMeetUpList(data));
   }, []);
-  return <MeetupList meetups={Dummy_MEETUPS}></MeetupList>;
+  return <MeetupList meetups={meeupList}></MeetupList>;
 }
 
 async function getData(): Promise<MeeupDto[]> {

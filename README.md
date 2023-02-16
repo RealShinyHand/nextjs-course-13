@@ -147,3 +147,15 @@ Error: Event handlers cannot be passed to Client Component props.
   더 많은데, 하다보면서 경험해야겠다.
 </ul>
 </div>
+
+<div>
+<h2>5.Data Fetching</h2>
+SEO를 위해<small>(맞는 말일까...)</small> next js 13에서는 이전과 다르게 get**** 뭐시기가 없다.
+<br/>
+기본적으로 SSR이기 때문이다. 문서에 따르면 컴포넌트 반환 함수를 async로 바꾸고 데이터 불러오는 함수(Promise<?>를 반환)을 await으로 하기만 하면 된다.
+<div>
+SSR이 아닌  'use client'이 명시된 클라이언트 컴포넌트에서 외부 값을 가져온다면 React 에서 하듯이 하면 된다.
+<div>새롭게 추가된 await과 비슷한 동작을 하는 ( == promise를 기다리는?block?peding?) use라는 훅은 사용하지 말라고 한다. 실제로 해당 에러 잡는다고 1시간 걸렸고, use 안 썻다. <small> 초기에 docs 대강 보고 쓰라는 건줄 알았다.</small> </div>
+</div>
+
+</div>
