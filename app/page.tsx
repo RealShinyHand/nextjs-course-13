@@ -18,6 +18,27 @@ const Dummy_MEETUPS: MeeupDto[] = [
     description: "This is a second meet up",
   },
 ];
-export default function HomePage() {
-  return <MeetupList meetups={Dummy_MEETUPS}></MeetupList>;
+
+export default async function HomePage() {
+  const meetupList = await getData();
+  return <MeetupList meetups={meetupList}></MeetupList>;
+}
+
+async function getData(): Promise<MeeupDto[]> {
+  const meetup = await fetch("https://jsonplaceholder.typicode.com/todos/1")
+    .then((res) => res.json())
+    .then((res) => {
+      console.log(res);
+      let meetup: MeeupDto = {
+        id: res.userId,
+        title: res.id,
+        image:
+          "https://www.wikipedia.org/portal/wikipedia.org/assets/img/Wikipedia-logo-v2.png",
+        address: res.completed + "동",
+        description: res.title + " description",
+      };
+      console.log(meetup);
+      return [meetup];
+    });
+  return meetup;
 }
