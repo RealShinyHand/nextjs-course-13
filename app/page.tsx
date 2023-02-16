@@ -29,9 +29,7 @@ const Dummy_MEETUPS: MeeupDto[] = [
 export default function HomePageCSR() {
   const [meeupList, setMeetUpList] = useState<MeeupDto[]>([]);
   useEffect(() => {
-    const data = getDataClient();
-    console.log(data);
-    setMeetUpList(Dummy_MEETUPS);
+    getDataClient().then((data) => setMeetUpList(data));
   }, []);
   return <MeetupList meetups={Dummy_MEETUPS}></MeetupList>;
 }
