@@ -151,14 +151,19 @@ Error: Event handlers cannot be passed to Client Component props.
 <div>
 <h2>5.Data Fetching</h2>
 <h3>Server Fetch<h3>
-<div>0005이미지 추가바람</div>
+
+
+<div><p align="center"><img src="https://user-images.githubusercontent.com/57449358/219429762-541cb7c7-af95-496b-aa9e-6ecb5460ae93.PNG"></img></p></div>
+<div><p align="center"><img src="https://user-images.githubusercontent.com/57449358/219429663-3a61b980-18dd-4434-b556-2202f1a3a08b.PNG"></img></p></div>
 SEO를 위해<small>(맞는 말일까...)</small> next js 13에서는 이전과 다르게 get**** 뭐시기가 없다.
 <br/>
 문서에 따르면 컴포넌트 반환 함수를 async로 바꾸고 데이터 불러오는 함수(Promise<?>를 반환)을 await으로 하기만 하면 된다.
 <div>
 <br/>
 <h3>Client Fetch<h3>
-<div>0004이미지 추가바람</div>
+<div><p align="center">
+  <img src="https://user-images.githubusercontent.com/57449358/219429722-30076681-269e-4c8a-a378-f259f9080529.PNG">
+</p></div>
 'use client'이 명시된 클라이언트 컴포넌트에서 외부 값을 가져온다면 React 에서 하듯이 하면 된다.
 <div>
 이때 컴포넌트 반환함수는 async면 안된다.
