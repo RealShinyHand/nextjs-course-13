@@ -152,7 +152,6 @@ Error: Event handlers cannot be passed to Client Component props.
 <h2>5.Data Fetching</h2>
 <h3>Server Fetch<h3>
 
-
 <div><p align="center"><img src="https://user-images.githubusercontent.com/57449358/219429762-541cb7c7-af95-496b-aa9e-6ecb5460ae93.PNG"></img></p></div>
 <div><p align="center"><img src="https://user-images.githubusercontent.com/57449358/219429663-3a61b980-18dd-4434-b556-2202f1a3a08b.PNG"></img></p></div>
 SEO를 위해<small>(맞는 말일까...)</small> next js 13에서는 이전과 다르게 get**** 뭐시기가 없다.
@@ -168,7 +167,14 @@ SEO를 위해<small>(맞는 말일까...)</small> next js 13에서는 이전과 
 <div>
 이때 컴포넌트 반환함수는 async면 안된다.
 </div>
+<small>
 <div>새롭게 추가된 await과 비슷한 동작을 하는 ( == promise를 기다리는?block?peding?) use라는 훅은 사용하지 말라고 한다. 실제로 해당 에러 잡는다고 1시간 걸렸고, use 안 썻다. <small> 초기에 docs 대강 보고 쓰라는 건줄 알았다.</small> </div>
+</small>
 </div>
+<ol>
+<li><div>getStaticProps => <br/> fetch('https://...');</div></li>
+<li><div>getStaticProps with revalidate => <br/> fetch('https://...', { next: { revalidate: 10 } });</div></li>
+<li><div>getServerSideProps => <br/> fetch('https://...', { cache: 'no-store' });</div></li>
+</ol>>
 
 </div>

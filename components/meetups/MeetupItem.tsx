@@ -8,7 +8,7 @@ function MeetupItem(props: any) {
   const router = useRouter();
 
   const detailButtonHandler = () => {
-    router.push(`/${props.id}`);
+    router.push(`/${props.title}`);
   };
 
   return (

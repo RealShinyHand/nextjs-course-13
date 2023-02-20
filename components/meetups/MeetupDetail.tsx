@@ -1,8 +1,8 @@
 import Image from "next/image";
-import { MeeupDto } from "./MeetupDto";
+import { MeetupDto } from "./MeetupDto";
 import classes from "./MeetupDetail.module.css";
 
-export default function MeetupDetail({ meetup }: { meetup: MeeupDto }) {
+export default function MeetupDetail({ meetup }: { meetup: MeetupDto }) {
   return (
     <>
       <div className={classes.detail}>

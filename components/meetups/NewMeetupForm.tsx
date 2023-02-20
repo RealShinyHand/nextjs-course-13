@@ -2,10 +2,10 @@
 import { useRef } from "react";
 
 import Card from "../ui/Card.js";
-import { MeeupDto } from "./MeetupDto.jsx";
+import { MeetupDto } from "./MeetupDto.jsx";
 import classes from "./NewMeetupForm.module.css";
 
-function NewMeetupForm(props: { onAddMeetup: (arg0: MeeupDto) => void }) {
+function NewMeetupForm(props: { onAddMeetup: (arg0: MeetupDto) => void }) {
   const titleInputRef = useRef<HTMLInputElement>(null);
   const imageInputRef = useRef<HTMLInputElement>(null);
   const addressInputRef = useRef<HTMLInputElement>(null);
@@ -19,7 +19,7 @@ function NewMeetupForm(props: { onAddMeetup: (arg0: MeeupDto) => void }) {
     const enteredAddress = addressInputRef.current?.value;
     const enteredDescription = descriptionInputRef.current?.value;
 
-    const meetupData: MeeupDto = {
+    const meetupData: MeetupDto = {
       id: "",
       title: enteredTitle ?? "",
       image: enteredImage ?? "",

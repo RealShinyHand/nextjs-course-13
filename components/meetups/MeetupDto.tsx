@@ -1,4 +1,4 @@
-export interface MeeupDto {
+export interface MeetupDto {
   id: string;
   image: string;
   title: string;

@@ -1,5 +1,6 @@
 import Layout from "../components/layout/Layout";
 import "./global.css";
+
 export default function RootLayout({
   children,
 }: {
